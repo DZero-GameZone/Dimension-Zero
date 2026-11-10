@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dimension Zero | Gaming Zone in Zundal, Gandhinagar</title>
+<meta name="description" content="Dimension Zero GameZone in Zundal, Gandhinagar. Console and PC gaming with the best multiplayer titles. Bring your friends, leave your excuses.">
+<meta name="theme-color" content="#0b0b12">
+<meta property="og:title" content="Dimension Zero | Gaming Zone">
+<meta property="og:description" content="Console and PC multiplayer gaming in Zundal, Gandhinagar. Real screens. Real rivals. Zero excuses.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b12; --bg2:#12121c; --card:#171724; --line:#2a2a3d;
+  --text:#ecebf5; --muted:#9a98b3;
+  --purple:#8b5cf6; --blue:#4f7cff; --orange:#ff8a1f; --cyan:#37d6ff;
+  --grad:linear-gradient(135deg,#4f7cff,#8b5cf6 55%,#c026d3);
+  --cut:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+   radial-gradient(900px 500px at 85% -10%,rgba(139,92,246,.22),transparent 60%),
+   radial-gradient(700px 500px at -10% 30%,rgba(255,138,31,.12),transparent 60%),
+   linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px) 0 0/48px 48px,
+   linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px) 0 0/48px 48px;}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.logo,.btn,.tag{font-family:"Chakra Petch",sans-serif}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(11,11,18,.72);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;font-size:1.7rem;font-style:italic;letter-spacing:1px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 10px rgba(139,92,246,.6))}
+.links{display:flex;gap:26px;align-items:center;font-weight:500;font-size:.95rem;color:var(--muted)}
+.links a:hover{color:var(--text)}
+@media(max-width:720px){.links a:not(.btn){display:none}}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;font-weight:600;font-size:1rem;letter-spacing:.3px;border:1px solid transparent;cursor:pointer;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%);transition:transform .15s,filter .15s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.btn-primary{background:linear-gradient(135deg,var(--orange),#ff5e3a);color:#160a00}
+.btn-ghost{background:rgba(255,255,255,.06);border-color:var(--line);color:var(--text)}
+.btn-sm{padding:9px 18px;font-size:.9rem}
+
+/* HERO */
+.hero{padding:88px 0 72px;text-align:center}
+.pill{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:99px;font-size:.8rem;color:var(--cyan);background:rgba(55,214,255,.06);letter-spacing:.6px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.6rem,8vw,5.6rem);line-height:1.02;font-weight:700;letter-spacing:-1px}
+.hero h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:560px;margin:22px auto 34px;color:var(--muted);font-size:1.1rem}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:640px;margin:56px auto 0}
+.stat{background:var(--card);border:1px solid var(--line);padding:18px 10px;clip-path:var(--cut)}
+.stat b{display:block;font-family:"Chakra Petch";font-size:1.9rem;color:var(--orange)}
+.stat small{color:var(--muted);font-size:.82rem}
+
+/* SECTIONS */
+section{padding:72px 0}
+.head{margin-bottom:34px}
+.head .eyebrow{color:var(--orange);font-family:"Chakra Petch";font-weight:600;letter-spacing:2px;font-size:.8rem;text-transform:uppercase}
+.head h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-top:6px}
+.head p{color:var(--muted);margin-top:8px;max-width:520px}
+
+/* FILTERS */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.chip{background:var(--card);border:1px solid var(--line);color:var(--muted);padding:8px 18px;border-radius:99px;font-family:"Chakra Petch";font-weight:600;font-size:.9rem;cursor:pointer;transition:.15s}
+.chip:hover{color:var(--text)}
+.chip.on{background:var(--grad);color:#fff;border-color:transparent}
+
+/* GAME GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.game{position:relative;min-height:150px;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line);clip-path:var(--cut);overflow:hidden;
+  background:var(--card);transition:transform .2s,border-color .2s}
+.game{aspect-ratio:7/4;padding:0;border:0;background:var(--g,#1c1c2e)}
+.game::before{content:"";position:absolute;inset:0;background:var(--g,linear-gradient(135deg,#1c1c2e,#2a1f4a));opacity:.9}
+.game::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,14,.85),transparent 70%)}
+.game .poster{position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+.game .poster.cover{object-fit:cover}
+.game .meta{position:absolute;left:18px;right:18px;bottom:16px;z-index:1}
+.game.pic::before,.game.pic::after,.game.pic .meta,.game.pic .tag{display:none}
+.game:hover{transform:translateY(-4px);border-color:var(--purple)}
+.game > *{position:relative;z-index:1}
+.game .tag{position:absolute;top:12px;right:12px;font-size:.68rem;font-weight:600;letter-spacing:.8px;padding:4px 9px;background:rgba(10,10,18,.75);border:1px solid rgba(255,255,255,.25);border-radius:5px;text-transform:uppercase}
+.game .tag.classics{color:var(--cyan);border-color:var(--cyan)}
+.game h3{font-size:1.25rem;font-weight:700;line-height:1.15;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.game small{color:#d8d6ee;font-size:.82rem;opacity:.85;margin-top:3px}
+.note{margin-top:22px;color:var(--muted);font-size:.9rem}
+
+/* VIBE */
+.vibes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.vibe{background:var(--card);border:1px solid var(--line);padding:26px;clip-path:var(--cut)}
+.vibe .n{font-family:"Chakra Petch";font-size:2.2rem;font-weight:700;color:var(--purple);opacity:.9}
+.vibe h3{margin:6px 0;font-size:1.2rem}
+.vibe p{color:var(--muted);font-size:.95rem}
+
+/* WHATSAPP BAND */
+.band{background:linear-gradient(135deg,rgba(139,92,246,.18),rgba(255,138,31,.14));border:1px solid var(--line);padding:38px;display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap;clip-path:var(--cut)}
+.band h3{font-size:1.6rem}
+.band p{color:var(--muted);margin-top:4px}
+
+/* LOCATION */
+.loc{display:grid;grid-template-columns:1fr 1.3fr;gap:22px}
+@media(max-width:860px){.loc{grid-template-columns:1fr}}
+.info{background:var(--card);border:1px solid var(--line);padding:28px;clip-path:var(--cut)}
+.row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row:last-of-type{border-bottom:0}
+.row .ic{font-size:1.2rem;width:26px;flex:none}
+.row b{display:block;font-family:"Chakra Petch";font-size:.8rem;letter-spacing:1.5px;color:var(--orange);text-transform:uppercase}
+.row span,.row a{color:var(--text)}
+.row a:hover{color:var(--cyan)}
+.info .btn{margin-top:18px;width:100%;justify-content:center}
+.map{border:1px solid var(--line);min-height:380px;clip-path:var(--cut);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:30px;
+  background:radial-gradient(circle at 50% 40%,rgba(139,92,246,.25),transparent 60%),linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px) 0 0/36px 36px,linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/36px 36px,var(--card)}
+.map .pin{font-size:3rem;filter:drop-shadow(0 0 14px var(--orange))}
+.map h3{font-size:1.5rem}
+.map p{color:var(--muted);margin-bottom:10px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:34px 0;margin-top:30px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:transform .15s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">DZ</a>
+    <div class="links">
+      <a href="#games">Games</a>
+      <a href="#vibe">Vibe</a>
+      <a href="#location">Find us</a>
+      <a class="btn btn-primary btn-sm" href="https://wa.me/919016481164" target="_blank" rel="noopener">Book on WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="pill">ZUNDAL · GANDHINAGAR</span>
+    <h1>Welcome to<br><span>Dimension Zero</span></h1>
+    <p>Real screens. Real rivals. Zero excuses. Your couch has had enough of you anyway.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://wa.me/919016481164" target="_blank" rel="noopener">Book a slot</a>
+      <a class="btn btn-ghost" href="#games">See the games</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="count">18</b><small>Titles ready</small></div>
+      <div class="stat"><b>PC + Console</b><small>Pick your poison</small></div>
+      <div class="stat"><b>0</b><small>Excuses accepted</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="games">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">The Library</div>
+      <h2>Pick a game. Pick a fight.</h2>
+      <p>Mostly multiplayer, because winning alone is just a tutorial.</p>
+    </div>
+    <div class="filters" id="filters">
+      <button class="chip on" data-f="all">All</button>
+      <button class="chip" data-f="multiplayer">Multiplayer</button>
+      <button class="chip" data-f="single">Single Player</button>
+      <button class="chip" data-f="classics">Classics</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="note">Lineup changes now and then. Ask on WhatsApp if your game isn't listed.</p>
+  </div>
+</section>
+
+<section id="vibe">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Why Dimension Zero</div>
+      <h2>Minimal talk. Maximum play.</h2>
+    </div>
+    <div class="vibes">
+      <div class="vibe"><div class="n">01</div><h3>Bring your squad</h3><p>Fighters, football, cricket, shooters. Settle every argument with a controller.</p></div>
+      <div class="vibe"><div class="n">02</div><h3>Play anything</h3><p>From modern hits to old-school classics that still hit harder than most new releases.</p></div>
+      <div class="vibe"><div class="n">03</div><h3>Book in seconds</h3><p>One WhatsApp message and your slot is sorted. No forms, no drama.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h3>Offers drop here first</h3>
+        <p>Join the WhatsApp group for offers, events and updates. We don't spam. We're too busy gaming.</p>
+      </div>
+      <a class="btn btn-primary" href="https://chat.whatsapp.com/CdWQALgHFYNGb57sHj0axQ?s=cl&p=a&iam=2" target="_blank" rel="noopener">Join the group</a>
+    </div>
+  </div>
+</section>
+
+<section id="location">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Find Us</div>
+      <h2>Lost? Gamers never are.</h2>
+    </div>
+    <div class="loc">
+      <div class="info">
+        <div class="row"><div class="ic">📍</div><div><b>Address</b><span>Shop no. 2, Atlantis 2, opposite Vivaan Elementos,<br>Zundal, Gandhinagar, Gujarat 382421</span></div></div>
+        <div class="row"><div class="ic">💬</div><div><b>WhatsApp</b><a href="https://wa.me/919016481164" target="_blank" rel="noopener">+91 90164 81164</a></div></div>
+        <div class="row"><div class="ic">📸</div><div><b>Instagram</b><a href="https://instagram.com/_dimension_gaming" target="_blank" rel="noopener">@_dimension_gaming</a></div></div>
+        <div class="row"><div class="ic">⏰</div><div><b>Timings</b><span>Message us on WhatsApp for slot availability.</span></div></div>
+        <a class="btn btn-primary" href="https://maps.app.goo.gl/1DkRGphxHbw8jG9CA?g_st=ac" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <a class="map" href="https://maps.app.goo.gl/1DkRGphxHbw8jG9CA?g_st=ac" target="_blank" rel="noopener">
+        <div class="pin">📍</div>
+        <h3>Dimension Zero GameZone</h3>
+        <p>Atlantis 2, opposite Vivaan Elementos, Zundal</p>
+        <span class="btn btn-primary">Open in Google Maps</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><span class="logo" style="font-size:1.2rem">DZ</span> &nbsp; Dimension Zero GameZone © <span id="yr"></span></div>
+    <div>Zundal, Gandhinagar</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919016481164" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.95L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2Zm5.8 14.2c-.25.7-1.45 1.35-2 1.4-.5.05-1.15.08-1.85-.12-.43-.14-.98-.32-1.68-.63-2.96-1.28-4.9-4.26-5.05-4.46-.14-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.52.25.6.85 2.07.92 2.22.08.15.12.33.02.52-.1.2-.15.32-.3.5-.15.17-.31.38-.44.5-.15.15-.3.3-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.08 1.32 2.38 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.12.07.72-.18 1.42Z"/></svg>
+</a>
+
+<script>
+/* ============================================================
+   EDIT THIS LIST to change games. No other code needed.
+   tag: "multiplayer" | "single" | "classics"
+   Optional: add  img:"img/yourfile.jpg"  to use a cover image
+   that you have rights to (put the file in an /img folder).
+   ============================================================ */
+const GAMES = [
+  {name:"Tekken 8",            genre:"Fighting",        tag:"multiplayer", g:"linear-gradient(135deg,#3a0f2a,#b0123a)"},
+  {name:"Mortal Kombat 11",    genre:"Fighting",        tag:"multiplayer", g:"linear-gradient(135deg,#6b4a00,#e0a200)"},
+  {name:"WWE 2K26",            genre:"Wrestling",       tag:"multiplayer", g:"linear-gradient(135deg,#4a0a0a,#e03a1e)"},
+  {name:"Rocket League",       genre:"Cars + Football", tag:"multiplayer", g:"linear-gradient(135deg,#0b3a8f,#a02cd6)"},
+  {name:"FIFA 27",             genre:"Football",        tag:"multiplayer", g:"linear-gradient(135deg,#0a3a6b,#14a06b)"},
+  {name:"Cricket 26",          genre:"Cricket",         tag:"multiplayer", g:"linear-gradient(135deg,#0a2a6b,#2a6bff)"},
+  {name:"Trials Rising",       genre:"Stunt Racing",    tag:"multiplayer", g:"linear-gradient(135deg,#1f3a5a,#4fa0c8)"},
+  {name:"GTA V",               genre:"Open World",      tag:"multiplayer", g:"linear-gradient(135deg,#7a1f6b,#ff8a1f)"},
+  {name:"Red Dead Redemption 2",genre:"Open World",     tag:"multiplayer", g:"linear-gradient(135deg,#6b0a0a,#e0481f)"},
+  {name:"Valorant",            genre:"Tactical Shooter",tag:"multiplayer", g:"linear-gradient(135deg,#3a0a14,#ff3a55)"},
+  {name:"CS2",                 genre:"Tactical Shooter",tag:"multiplayer", g:"linear-gradient(135deg,#4a3a20,#c89a4a)"},
+  {name:"Minecraft",           genre:"Sandbox",         tag:"multiplayer", g:"linear-gradient(135deg,#1f5a1f,#6bc84a)"},
+  {name:"Palworld",            genre:"Survival",        tag:"multiplayer", g:"linear-gradient(135deg,#1f6bc8,#ffc83a)"},
+  {name:"Spider-Man 2",        genre:"Action Adventure",tag:"single",      g:"linear-gradient(135deg,#6b0a0a,#1a2a8f)"},
+  {name:"inFAMOUS Second Son", genre:"Action Adventure",tag:"single",      g:"linear-gradient(135deg,#1a1a24,#d6a21f)"},
+  {name:"I.G.I.-2 Covert Strike",genre:"Stealth Shooter",tag:"classics",   g:"linear-gradient(135deg,#0a1a2a,#3a5a7a)"},
+  {name:"NFS Most Wanted",     genre:"Street Racing",   tag:"classics",    g:"linear-gradient(135deg,#4a3a0a,#e0a21f)"}
+];
+const LABEL = {multiplayer:"Multiplayer", single:"Single Player", classics:"Classics"};
+const grid = document.getElementById("grid");
+
+function render(f){
+  grid.innerHTML = "";
+  GAMES.filter(x => f==="all" || x.tag===f).forEach(x=>{
+    const el = document.createElement("article");
+    el.className = "game";
+    el.style.setProperty("--g", x.g);
+    const slug = x.name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+    el.innerHTML = `<span class="tag ${x.tag}">${LABEL[x.tag]}</span><div class="meta"><h3></h3><small></small></div>`;
+    el.querySelector("h3").textContent = x.name;
+    el.querySelector("small").textContent = x.genre;
+    /* poster: shows if the image file exists, otherwise the gradient + text stays */
+    const img = new Image();
+    img.className = "poster"; img.alt = x.name; img.loading = "lazy";
+    img.onload = () => { const r = img.naturalWidth/img.naturalHeight; if(r >= 1.6 && r <= 1.85) img.classList.add("cover"); el.classList.add("pic"); };
+    img.onerror = () => img.remove();
+    img.src = x.img || "img/" + slug + ".jpg";
+    el.appendChild(img);
+    grid.appendChild(el);
+  });
+}
+document.getElementById("filters").addEventListener("click", e=>{
+  const b = e.target.closest(".chip"); if(!b) return;
+  document.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));
+  b.classList.add("on"); render(b.dataset.f);
+});
+document.getElementById("count").textContent = GAMES.length;
+document.getElementById("yr").textContent = new Date().getFullYear();
+render("all");
+</script>
+</body>
+</html>
