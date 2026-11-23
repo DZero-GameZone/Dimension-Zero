@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dzero-gamezone.github.io/Dimension-Zero/sitemap.xml
